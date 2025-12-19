@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Projeto Janna</title>
-</head>
-<body>
-    <h1>Bem-vindo ao Projeto Janna</h1>
-    <p>Seu primeiro template está funcionando!</p>
-</body>
-</html>
+
+{% extends "core/base.html" %} <!-- Utilizando o arquivo base.html como pai -->
+
+<!-- Conteúdo que irá para o arquivo base -->
+{% block content %}
+	<h2>Pagina Inicial</h2>
+    <p>Agora o template base está funcionando</p>
+{% endblock %}
