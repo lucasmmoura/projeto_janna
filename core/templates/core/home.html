@@ -3,6 +3,21 @@
 
 <!-- Conteúdo que irá para o arquivo base -->
 {% block content %}
-	<h2>Pagina Inicial</h2>
-    <p>Agora o template base está funcionando</p>
+    <h2>Campeões</h2>
+
+    {% if campeoes %}
+        <ul>
+            {% for campeao in campeoes %}
+                <li>
+                    <strong>{{ campeao.nome }}</strong><br>
+                    Função: {{ campeao.funcao }}<br>
+                    {{ campeao.descricao }}
+                </li>
+
+                <hr>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhum campeão cadastrado.</p>
+    {% endif %}
 {% endblock %}
