@@ -12,7 +12,7 @@ def home(request):
 
 def campeao_detalhe(request, id):
     campeao = get_object_or_404(Campeao, id=id) #Busca no banco um campeão com o id igual ao da url; Se achar retorna o objeto, se não achar = pagina 404
-    return render(request, "core/campeao_detalhe_html", # Template
+    return render(request, "core/campeao_detalhe.html", # Template
                   {
         "campeao": campeao #Objeto para o template
     })
