@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <h2>{{campeao.nome}}</h2>
+
+    <p><strong>Função:</strong> {{campeao.funcao}}</p>
+
+    <p>{{campeao.descricao}}</p>
+
+    <a href="{% url 'home' %">Voltar para a lista</a>
+{%endblock%}
